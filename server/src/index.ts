@@ -10,6 +10,8 @@ type Chat = {
 // インメモリでデータを保持
 const chatBoard: Chat[] = [];
 
+console.log("server listening...");
+
 wss.on("connection", (ws: WebSocket.WebSocket) => {
   ws.on("message", (payload: WebSocket.RawData) => {
     if (typeof payload === "string") {
