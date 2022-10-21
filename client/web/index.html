@@ -7,6 +7,18 @@
 </head>
 <body>
 	<h1>simple-websocket.ts</h1>
+	<select id="room">
+		<option value="A">A</option>
+		<option value="B">B</option>
+		<option value="C">C</option>
+	</select>
+	<div>Room → <span id="room"></span></div>
+	<div>Name → <input type="text" id="name" /></div>
+	<div>
+		<input type="text" id="message" />
+		<button id="send">送信</button>
+	</div>
+	<ul id="messageContainer"></ul>
 	<script src="index.js"></script>
 </body>
 </html>
