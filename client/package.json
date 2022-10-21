@@ -11,5 +11,9 @@
   "devDependencies": {
     "@types/node": "^18.11.3",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "save-dev": "^0.0.1-security",
+    "tslint": "^6.1.3"
   }
 }
