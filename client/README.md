@@ -17,4 +17,6 @@ npm i typescript -g
 
 npm install node-sass -D
 npm run compile:sass
+
+npm install -g http-server
 ```
