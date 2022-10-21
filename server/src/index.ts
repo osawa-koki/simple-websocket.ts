@@ -2,28 +2,21 @@ import WebSocket from "ws"
 
 const wss = new WebSocket.Server({ port: 8787 });
 
-type Chat = {
-  userId: string,
-  message: string
-}
-
-// インメモリでデータを保持
-const chatBoard: Chat[] = [];
-
 console.log("server listening...");
 
 wss.on("connection", (ws: WebSocket.WebSocket) => {
-  ws.on("message", (payload: WebSocket.RawData) => {
-    if (typeof payload === "string") {
-      chatBoard.push(JSON.parse(payload));
-    }
+  ws.on("message", (row: WebSocket.RawData) => {
+    const payload = row.toString();
 
-    // 全ての接続先に送信
-    wss.clients.forEach((client) => {
-      client.send(JSON.stringify(chatBoard));
-    })
+    const {user, message} = JSON.parse(payload);
+
+    wss.clients.forEach((client: WebSocket.WebSocket) => {
+      client.send(JSON.stringify({
+        user: user,
+        message: message,
+      }));
+    });
+
   });
-
-  ws.send(JSON.stringify(chatBoard));
 });
 
