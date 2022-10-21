@@ -13,4 +13,5 @@ npm install typescript --save-dev
 npm install @types/node --save-dev
 npx tsc --init
 npm install save-dev tslint
+npm i typescript -g
 ```
