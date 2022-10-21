@@ -1,5 +1,11 @@
 const sock = new WebSocket("ws://127.0.0.1:8787");
 
+document.getElementById("send")?.addEventListener("click", function() {
+	const message = (document.getElementById("message") as HTMLInputElement)?.value;
+	sock.send(message);
+});
+
+
 sock.addEventListener("open", e => {
 	console.log("接続が開かれたときに呼び出されるイベント");
 });
@@ -15,4 +21,3 @@ sock.addEventListener("close", e => {
 sock.addEventListener("error", e => {
 	console.log("エラーが発生したときに呼び出されるイベント");
 });
-
