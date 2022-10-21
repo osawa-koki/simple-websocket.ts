@@ -14,4 +14,7 @@ npm install @types/node --save-dev
 npx tsc --init
 npm install save-dev tslint
 npm i typescript -g
+
+npm install node-sass -D
+npm run compile:sass
 ```
