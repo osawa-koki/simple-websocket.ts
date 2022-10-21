@@ -19,4 +19,5 @@ npm install node-sass -D
 npm run compile:sass
 
 npm install -g http-server
+http-server -p 8000 -o
 ```
