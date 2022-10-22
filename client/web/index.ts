@@ -1,9 +1,10 @@
 const sock = new WebSocket("ws://127.0.0.1:8787");
 
 document.getElementById("send")?.addEventListener("click", function() {
+	const user = (document.getElementById("user") as HTMLInputElement)?.value;
 	const message = (document.getElementById("message") as HTMLInputElement)?.value;
 	sock.send(JSON.stringify({
-		user: 'alice',
+		user: user,
 		message: message,
 	}));
 });
