@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
-.main {
-	color: red;
+.user_message {
+	display: flex;
+	margin: 50px 0;
+	* {
+		margin-right: 10px;
+	}
+}
+
+#messageContainer {
+	margin: 50px 0;
+	border: 1px black solid;
+	padding: 25px;
+	max-width: 500px;
 }
