@@ -4,8 +4,9 @@
   "description": "WebSocketサンプルプログラムのクライアント部分。",
   "main": "index.js",
   "scripts": {
+    "build": "tsc && sass ./web/index.scss",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "sass web/index.scss dist/index.css --watch"
+    "compile:sass": "sass ./web/index.scss ./web/index.css --watch"
   },
   "author": "osawa-koki",
   "license": "Apache-2.0",
