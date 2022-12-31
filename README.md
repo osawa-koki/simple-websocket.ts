@@ -2,7 +2,7 @@
 
 TypeScriptを使用したWebSocketプログラムのサンプル。  
 
-![サンプル画像](dev/data/sample.gif)  
+![サンプル画像](./.development/img/sample.gif)  
 
 ## 参考資料
 
